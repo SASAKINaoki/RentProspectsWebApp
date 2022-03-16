@@ -5,7 +5,7 @@ def index():
     return render_template('index.html')
 
 @app.route('/', methods=['POST'])
-def index():
+def result():
     return render_template('index.html')
 
 @app.route('/analytics', methods=['GET'])
