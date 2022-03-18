@@ -1,4 +1,9 @@
 from flask import Flask, render_template, request
+from backend.scraping.scraping import scraping
+import batch
+
+app=Flask(__name__, static_folder='./templates/images')
+
 
 @app.route('/', methods=['GET'])
 def index():
