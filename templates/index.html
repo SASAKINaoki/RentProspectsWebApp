@@ -1,0 +1,128 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Index
+{% endblock %}
+
+{% block headline %}
+{% endblock %}
+
+{% block content %}
+<p>{{message}}</p>
+
+<form action="/" method="post">
+    <div class="container mt-5 p-lg-5 bg-light">
+        <div class="row">
+            <div class="form-group col-6">
+                <label for="plan_sel">間取り</label>
+                <select class="form-control" name="plan" id="sel1">
+                    <!-- RLDK-->>
+                    <option value="1000">ワンルーム</option>
+                    <option value="1001">1K</option>
+                    <option value="1011">1DK</option>
+                    <option value="1111">1LDK</option>
+                    <option value="2001">2K</option>
+                    <option value="2011">2DK</option>
+                    <option value="2111">2LDK</option>
+                    <option value="3001">3K</option>
+                    <option value="3011">3DK</option>
+                    <option value="3111">3LDK</option>
+                    <option value="4001">4K</option>
+                    <option value="4011">4DK</option>
+                    <option value="4111">4LDK</option>
+                </select>
+            </div>
+
+            <div class="form-group col-6">
+                <label for="input_category">建物種別</label>
+                <select class="form-control" name="category" id="sel2">
+                    <option value="100">アパート</option>
+                    <option value="010">マンション</option>
+                    <option value="001">一戸建て</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col-6">
+                <label for="input_year">築年数</label>
+                <select class="form-control" name="year" id="sel3">
+                    <option value="0">新築</option>
+                    <option value="3">5以内</option>
+                    <option value="10">5年 ~ 15年</option>
+                    <option value="20">15年 ~ 25年</option>
+                    <option value="30">25年 ~ 35年</option>
+                </select>
+            </div>
+
+            <div class="form-group col-6">
+                <label for="input_area">占有面積</label>
+                <select class="form-control" name="area" id="sel4">
+                    <option value="35">40m2未満</option>
+                    <option value="45">40m2 ~ 50m2</option>
+                    <option value="55">50m2 ~ 60m2</option>
+                    <option value="65">60m2以上</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col-6">
+                <label for="input_access">アクセス</label>
+                <select class="form-control" name="access" id="sel5">
+                    <option value="3">5分未満</option>
+                    <option value="10">10分未満</option>
+                    <option value="20">20分未満</option>
+                    <option value="30">30分未満</option>
+                    <option value="60">30分以上</option>
+                </select>
+            </div>
+
+            <div class="form-group col-6">
+                <label for="input_structure">構造</label>
+                <select class="form-control" name="structure" id="sel6">
+                    <option value="1">木造</option>
+                    <option value="0">鉄筋コンクリート</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col-6">
+                <label for="input_floor">階建</label>
+                <select class="form-control" name="floor" id="sel7">
+                    <option value="1">1階</option>
+                    <option value="3">2階 ~ 4階</option>
+                    <option value="5">5階以上</option>
+                </select>
+            </div>
+
+            <div class="form-group col-6">
+                <label for="input_tatami">和室</label>
+                <select class="form-control" name="tatami" id="sel8">
+                    <option value="0">なし</option>
+                    <option value="1">あり</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col-12">
+                <label for="input_location">住所</label>
+                <input type="text" class="form-control" id="tx1" name="location" placeholder="宮城県仙台市青葉区花京院">
+            </div>
+        </div>
+        
+        <div class="form-group btn btn-primary">
+            <input type="submit" class="btn btn-primary" value="送信">
+        </div>
+        
+    </div>
+</form>
+
+
+{% endblock %}
+
+{% block footer %}
+copyright 2022 SASAKI-Naoki
+{% endblock %}

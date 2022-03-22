@@ -4,7 +4,6 @@ import batch
 
 app=Flask(__name__, static_folder='./templates/images')
 
-
 @app.route('/', methods=['GET'])
 def index():
     return render_template('index.html')

@@ -95,7 +95,7 @@ def scraping():
                     f.close()
 
             except NoSuchElementException:
-                print("notfind element.")
+                print("not find element.")
             except WebDriverException:
                 print("not find exception.")
 
